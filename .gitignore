@@ -1,0 +1,31 @@
+.DS_Store
+Thumbs.db
+
+
+.vs/
+*.suo
+*.user
+*.rsuser
+*.userosscache
+*.sln.docstates
+
+**/bin/
+**/obj/
+TestResults/
+artifacts/
+
+
+**/appsettings.Development.json
+**/appsettings.Local.json
+**/secrets.json
+
+**/appsettings.json
+
+# --- VS Code ---
+.vscode/
+
+# --- Frontend 
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+*.log
