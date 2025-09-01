@@ -16,9 +16,10 @@ namespace PurrfectMates.Models
         public string nomUtilisateur { get; set; }
         public string prenomUtilisateur { get; set; }
         public string emailUtilisateur { get; set; }
-        public string motDePasseUtilisateur { get; set; } = default!;
         public Role Role { get; set; } = Role.Adoptant;
         public string? photoProfilUtilisateur { get; set; }
+        [Required]
+        public string ApplicationUserId { get; set; } = "";
       
       //  public bool EstActif { get; set; }
 

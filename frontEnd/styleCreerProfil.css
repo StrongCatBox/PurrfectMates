@@ -1,0 +1,240 @@
+        :root {
+            --primary-color: #8B5A3C;
+            --accent-color: #B87333;
+            --light-bg: #FDF5F0;
+            --text-muted: #6C757D;
+        }
+        
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--light-bg);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .navbar {
+            background-color: transparent !important;
+            padding: 1.5rem 0;
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            color: #333 !important;
+            font-size: 1.5rem;
+        }
+        
+        .navbar-nav .nav-link {
+            color: #666 !important;
+            margin-left: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .main-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            padding: 2rem 0;
+        }
+        
+        .quote-section {
+            padding: 3rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+        
+        .quote-text {
+            font-size: 2.2rem;
+            font-style: italic;
+            color: #333;
+            line-height: 1.3;
+            font-weight: 300;
+        }
+        
+        .profile-section {
+            background-color: white;
+            padding: 3rem 2rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .profile-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        
+        .profile-subtitle {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+        
+        .btn-toggle-group {
+            display: flex;
+            gap: 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn-toggle {
+            flex: 1;
+            padding: 0.8rem 1.5rem;
+            border: 1px solid #E0E0E0;
+            background-color: white;
+            color: #666;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-toggle:first-child {
+            border-radius: 25px 0 0 25px;
+        }
+        
+        .btn-toggle:last-child {
+            border-radius: 0 25px 25px 0;
+        }
+        
+        .btn-toggle.active {
+            background-color: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+        
+        .btn-toggle:hover:not(.active) {
+            background-color: #F8F9FA;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-control {
+            border: 1px solid #E0E0E0;
+            border-radius: 8px;
+            padding: 1rem 0.75rem;
+            font-size: 0.95rem;
+            background-color: #FAFAFA;
+        }
+        
+        .form-control:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 0.2rem rgba(184, 115, 51, 0.15);
+            background-color: white;
+        }
+        
+        .photo-upload {
+            border: 2px dashed #E0E0E0;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            background-color: #FAFAFA;
+            transition: border-color 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .photo-upload:hover {
+            border-color: var(--accent-color);
+        }
+        
+        .photo-upload-text {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        
+        .form-label {
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .form-select {
+            border: 1px solid #E0E0E0;
+            border-radius: 8px;
+            padding: 1rem 0.75rem;
+            font-size: 0.95rem;
+            background-color: #FAFAFA;
+        }
+        
+        .form-select:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 0.2rem rgba(184, 115, 51, 0.15);
+            background-color: white;
+        }
+        
+        .btn-create-profile {
+            background-color: var(--accent-color);
+            border: none;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            width: 100%;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn-create-profile:hover {
+            background-color: #A66829;
+            color: white;
+        }
+        
+        .footer {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 2rem 0 1rem;
+        }
+        
+        .footer a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .footer a:hover {
+            color: white;
+        }
+        
+        #photo-input {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .quote-text {
+                font-size: 1.8rem;
+            }
+            
+            .main-container {
+                min-height: auto;
+            }
+            
+            .quote-section {
+                padding: 2rem 1rem;
+                text-align: center;
+            }
+            
+            .profile-section {
+                padding: 2rem 1rem;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .profile-section {
+                border-left: 1px solid #E0E0E0;
+            }
+        }
