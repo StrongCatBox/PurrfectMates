@@ -16,10 +16,10 @@ namespace PurrfectMates.Models
         public string nomUtilisateur { get; set; }
         public string prenomUtilisateur { get; set; }
         public string emailUtilisateur { get; set; }
+        public string motDePasseUtilisateurHash { get; set; } = "";
         public Role Role { get; set; } = Role.Adoptant;
         public string? photoProfilUtilisateur { get; set; }
-        [Required]
-        public string ApplicationUserId { get; set; } = "";
+      
       
       //  public bool EstActif { get; set; }
 
@@ -47,10 +47,10 @@ namespace PurrfectMates.Models
                 erreurs.Add("Email invalide");
             }
 
-            //if (string.IsNullOrWhiteSpace(motDePasseUtilisateur) || motDePasseUtilisateur.Length < 8)
-            //{
-            //    erreurs.Add("Mot de passe trop court");
-            //}
+            if (string.IsNullOrWhiteSpace(motDePasseUtilisateurHash) || motDePasseUtilisateurHash.Length < 8)
+            {
+                erreurs.Add("Mot de passe trop court");
+            }
 
             if (erreurs.Any())
             {
@@ -66,12 +66,12 @@ namespace PurrfectMates.Models
         
         }
 
-        public Utilisateur(string unNom, string unPrenom, string unEmail, Role unRole, string unePhotoProfil, string uneDescription)
+        public Utilisateur(string unNom, string unPrenom, string unEmail, string unMotDepasse, Role unRole, string unePhotoProfil, string uneDescription)
         {
             this.nomUtilisateur = unNom;
             this.prenomUtilisateur = unPrenom;
             this.emailUtilisateur = unEmail;
-            //this.motDePasseUtilisateur = unMotDepasse;
+            this.motDePasseUtilisateurHash = unMotDepasse;
             this.Role = unRole;
             this.photoProfilUtilisateur = unePhotoProfil;
            
