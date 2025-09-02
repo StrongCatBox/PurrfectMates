@@ -1,11 +1,12 @@
-﻿using System;
+﻿using PurrfectMates.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PurrfectMates.Enums;
 
 
 namespace PurrfectMates.Models
@@ -16,6 +17,8 @@ namespace PurrfectMates.Models
         public string nomUtilisateur { get; set; }
         public string prenomUtilisateur { get; set; }
         public string emailUtilisateur { get; set; }
+
+        [Column("motDePasseUtilisateur")]
         public string motDePasseUtilisateurHash { get; set; } = "";
         public Role Role { get; set; } = Role.Adoptant;
         public string? photoProfilUtilisateur { get; set; }
