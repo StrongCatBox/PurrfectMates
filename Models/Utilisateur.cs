@@ -22,9 +22,13 @@ namespace PurrfectMates.Models
         public string motDePasseUtilisateurHash { get; set; } = "";
         public Role Role { get; set; } = Role.Adoptant;
         public string? photoProfilUtilisateur { get; set; }
-      
-      
-      //  public bool EstActif { get; set; }
+        public ICollection<Match> Matches { get; set; } = new List<Match>();
+
+
+
+
+
+        //  public bool EstActif { get; set; }
 
 
 

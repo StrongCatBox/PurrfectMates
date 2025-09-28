@@ -12,13 +12,16 @@ namespace PurrfectMates.Models
     [Table("Matching")]
     public class Match
     {
-        [Key] public int IdMatch { get; set; }
-        public int UtilisateurId {  get; set; }
+        [Column("idUtilisateur")]
+        public int UtilisateurId { get; set; }
         public Utilisateur Utilisateur { get; set; }
-        public int AnimalId {  get; set; }
+
+        [Column("idAnimal")]
+        public int AnimalId { get; set; }
         public Animal Animal { get; set; }
+
+        [Column("dateMatching")]
         public DateTime DateMatch { get; set; }
-        public bool EstAime { get; set; }
 
         public Match()
         {
@@ -30,7 +33,7 @@ namespace PurrfectMates.Models
             this.Utilisateur = unUtilisateur;
             this.Animal = unAnimal;
             this.DateMatch = uneDateMatch;
-            this.EstAime = false;
+          
         }
 
     }
