@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purrfect Mates - Mon profil</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="/css/styleMonProfil.css">
+    <link rel="stylesheet" href="/css/styleGeneral.css">
+
+    
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">purrfect mates</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">déconnexion</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Wrapper -->
+    <div class="main-wrapper">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <a href="/matchmaking.html" class="sidebar-item">
+                <i class="fas fa-home"></i>
+                <span>Accueil</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <i class="fas fa-comment"></i>
+                <span>Messages</span>
+            </a>
+            <a href="/monProfil.html" class="sidebar-item active">
+                <i class="fas fa-user"></i>
+                <span>Mon profil</span>
+            </a>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content-area">
+            <!-- Profile Tabs -->
+           <div class="profile-tabs">
+            <button class="profile-tab active" onclick="switchTab('profile')">Mon profil</button>
+            <button class="profile-tab" id="btn-dynamic" onclick="switchTab('animal')">Mon animal</button>
+            </div>
+
+
+
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="profile-info">
+                    <h2>Lana Doe</h2>
+                    <span class="profile-badge">Adoptant</span>
+                </div>
+            </div>
+
+            <!-- Description Section -->
+            <div class="profile-section">
+                <textarea class="description-box" placeholder="Description">Description</textarea>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn btn-change-password">Changer mon mot de passe</button>
+                <input type="password" class="password-input" placeholder="Ancien mot de passe">
+                <input type="password" class="password-input" placeholder="Nouveau mot de passe">
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn btn-delete-account">Supprimer mon compte</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-2">
+                    <a href="#" class="text-decoration-none">Support</a>
+                </div>
+                <div class="col-md-3 mb-2">
+                    <a href="#" class="text-decoration-none">Mentions légales</a>
+                </div>
+                <div class="col-md-3 mb-2">
+                    <a href="#" class="text-decoration-none">Politique de confidentialité</a>
+                </div>
+                <div class="col-md-3 mb-2">
+                    <a href="#" class="text-decoration-none">Conditions Générales d'Utilisation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./Javascript/auth/profileUi.js"></script>
+</body>
+</html>

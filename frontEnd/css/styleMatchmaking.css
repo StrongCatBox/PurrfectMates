@@ -1,0 +1,142 @@
+
+        
+        .navbar {
+            background-color: white !important;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+
+        
+        .main-wrapper {
+            flex: 1;
+            display: flex;
+            overflow: hidden;
+        }
+        
+        
+        .content-area {
+            flex: 1;
+            padding: 2rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .btn-start-match {
+            background-color: var(--secondary-color);
+            border: none;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 25px;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            margin-bottom: 2rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn-start-match:hover {
+            background-color: #6A8A6E;
+            color: white;
+        }
+        
+        .card-container {
+            max-width: 400px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .match-card {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .match-card-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #F0E6D8 0%, #E8D5C4 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .match-card-actions {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .action-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .action-btn.like {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .action-btn.like:hover {
+            background-color: #6A8A6E;
+            transform: scale(1.1);
+        }
+        
+        .action-btn.dislike {
+            background-color: #E0E0E0;
+            color: #666;
+        }
+        
+        .action-btn.dislike:hover {
+            background-color: #D0D0D0;
+            transform: scale(1.1);
+        }
+        
+        .match-card-footer {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .match-card-footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        
+        .match-card-footer a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+        
+        
+        /*mediaqueries sert a personaliser le css en fonction de taille des ecrans*/
+        @media (max-width: 768px) {
+            .main-wrapper {
+                flex-direction: column;
+            }
+            
+            .content-area {
+                padding: 1rem;
+            }
+            
+            .match-card-image {
+                height: 300px;
+            }
+        }

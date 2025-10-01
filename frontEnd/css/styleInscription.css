@@ -1,39 +1,7 @@
-:root {
-    --primary-color: #8B5A3C;
-    --accent-color: #B87333;
-    --light-bg: #FDF5F0;
-    --text-muted: #6C757D;
-}
-
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: var(--light-bg);
-    color: #333;
-    display: flex;
-    flex-direction: column;
-}
 
 .navbar {
     background-color: transparent !important;
     padding: 1.5rem 0;
-}
-
-.navbar-brand {
-    font-weight: bold;
-    color: #333 !important;
-    font-size: 1.5rem;
-}
-
-.navbar-nav .nav-link {
-    color: #666 !important;
-    margin-left: 1rem;
-    font-size: 0.95rem;
 }
 
 .main-container {
@@ -139,22 +107,6 @@ body {
             text-decoration: underline;
         }
 
-.footer {
-    background-color: var(--accent-color);
-    color: white;
-    padding: 2rem 0 1rem;
-}
-
-    .footer a {
-        color: rgba(255, 255, 255, 0.9);
-        text-decoration: none;
-        transition: color 0.3s ease;
-        font-size: 0.9rem;
-    }
-
-        .footer a:hover {
-            color: white;
-        }
 
 @media (max-width: 768px) {
     .welcome-title {

@@ -1,31 +1,10 @@
-        :root {
-            --primary-color: #8B5A3C;
-            --secondary-color: #7A9A7E;
-            --accent-color: #B87333;
-            --light-bg: #FDF5F0;
-        }
-        
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: var(--light-bg);
-            color: #333;
-        }
+
         
         .navbar {
             background-color: transparent !important;
             padding: 1rem 0;
         }
-        
-        .navbar-brand {
-            font-weight: bold;
-            color: #333 !important;
-            font-size: 1.5rem;
-        }
-        
-        .navbar-nav .nav-link {
-            color: #666 !important;
-            margin-left: 1rem;
-        }
+
         
         .btn-subscribe {
             background-color: var(--accent-color);
@@ -135,22 +114,6 @@
             font-weight: bold;
             margin-bottom: 1rem;
             color: #333;
-        }
-        
-        .footer {
-            background-color: var(--accent-color);
-            color: white;
-            padding: 2rem 0 1rem;
-        }
-        
-        .footer a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .footer a:hover {
-            color: white;
         }
         
         @media (max-width: 768px) {
