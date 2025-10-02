@@ -1,162 +1,179 @@
+.navbar {
+    background-color: white !important;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
 
-        .navbar {
-            background-color: white !important;
-            padding: 1rem 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        
-        
-        .main-wrapper {
-            flex: 1;
-            display: flex;
-            overflow: hidden;
-        }
-        
-        
 
-        
-        .content-area {
-            flex: 1;
-            padding: 2rem 3rem;
-            overflow-y: auto;
-            background-color: white;
-        }
-        
-        .profile-tabs {
-            border-bottom: 2px solid #E0E0E0;
-            margin-bottom: 2rem;
-            display: flex;
-            gap: 0;
-        }
-        
-        .profile-tab {
-            padding: 1rem 2rem;
-            background: none;
-            border: none;
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            font-weight: 500;
-            cursor: pointer;
-            border-bottom: 3px solid transparent;
-            transition: all 0.3s ease;
-            position: relative;
-            bottom: -2px;
-        }
-        
-        .profile-tab.active {
-            color: #333;
-            border-bottom-color: var(--accent-color);
-        }
-        
-        .profile-tab:hover:not(.active) {
-            color: #333;
-        }
-        
-        .animal-header {
-            display: flex;
-            align-items: flex-start;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .animal-avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background-color: var(--secondary-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            flex-shrink: 0;
-        }
-        
-        .animal-avatar i {
-            font-size: 3rem;
-            color: white;
-        }
-        
-        .animal-info {
-            flex: 1;
-        }
-        
-        .animal-info h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .animal-details {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
-        
-        .view-photos-link {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
-        
-        .view-photos-link:hover {
-            color: var(--accent-color);
-            text-decoration: underline;
-        }
-        
-        .description-section {
-            background-color: #FAFAFA;
-            border: 1px solid #E8E8E8;
-            border-radius: 15px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        
-        .description-box {
-            width: 100%;
-            min-height: 150px;
-            border: none;
-            background: transparent;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            resize: vertical;
-            padding: 0;
-        }
-        
-        .description-box:focus {
-            outline: none;
-        }
-        
-        .btn-modify-animal {
-            background-color: var(--secondary-color);
-            border: none;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 25px;
-            font-weight: 500;
-            transition: background-color 0.3s ease;
-        }
-        
-        .btn-modify-animal:hover {
-            background-color: #6A8A6E;
-            color: white;
-        }
-        
-        
-        @media (max-width: 768px) {
-            .main-wrapper {
-                flex-direction: column;
-            }
-            
-            
-            .content-area {
-                padding: 1rem;
-            }
-            
-            .animal-header {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-        }
+.main-wrapper {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+
+
+
+.content-area {
+    flex: 1;
+    padding: 2rem 3rem;
+    overflow-y: auto;
+    background-color: white;
+}
+
+.profile-tabs {
+    border-bottom: 2px solid #E0E0E0;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 0;
+}
+
+.profile-tab {
+    padding: 1rem 2rem;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    bottom: -2px;
+}
+
+.profile-tab.active {
+    color: #333;
+    border-bottom-color: var(--accent-color);
+}
+
+.profile-tab:hover:not(.active) {
+    color: #333;
+}
+
+.animal-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.animal-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.animal-avatar i {
+    font-size: 3rem;
+    color: white;
+}
+
+.animal-info {
+    flex: 1;
+}
+
+.animal-info h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.animal-details {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.view-photos-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.view-photos-link:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.description-section {
+    background-color: #FAFAFA;
+    border: 1px solid #E8E8E8;
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.description-box {
+    width: 100%;
+    min-height: 150px;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    resize: vertical;
+    padding: 0;
+}
+
+.description-box:focus {
+    outline: none;
+}
+
+.btn-modify-animal {
+    background-color: var(--secondary-color);
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-modify-animal:hover {
+    background-color: #6A8A6E;
+    color: white;
+}
+
+.btn-add-animal {
+    background-color: #7A9D7E;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-add-animal:hover {
+    background-color: #6A8A6E;
+}
+
+
+@media (max-width: 768px) {
+    .main-wrapper {
+        flex-direction: column;
+    }
+
+
+    .content-area {
+        padding: 1rem;
+    }
+
+    .animal-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

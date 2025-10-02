@@ -20,13 +20,15 @@ export async function register(userData) {
         return null;
     }
 }
-
 export async function login(credentials) {
     try {
         const response = await fetch(`${API_URL}/login`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(credentials),
+            body: JSON.stringify({
+                email: credentials.email,
+                motDePasse: credentials.password 
+            }),
         });
 
         if (!response.ok) {
@@ -40,6 +42,7 @@ export async function login(credentials) {
         return null;
     }
 }
+
 
 export async function me(token) {
     try {

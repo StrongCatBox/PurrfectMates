@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purrfect Mates - Mon animal</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styleAjouterAnimal.css">
+    <link rel="stylesheet" href="/css/styleGeneral.css">
+
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">purrfect mates</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">déconnexion</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Wrapper -->
+    <div class="main-wrapper">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <a href="#" class="sidebar-item">
+                <i class="fas fa-home"></i>
+                <span>Accueil</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <i class="fas fa-comment"></i>
+                <span>Messages</span>
+            </a>
+            <a href="#" class="sidebar-item active">
+                <i class="fas fa-user"></i>
+                <span>Mon profil</span>
+            </a>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content-area">
+            <!-- Profile Tabs -->
+            <div class="profile-tabs">
+                <button class="profile-tab" id="btn-profile">Mon profil</button>
+                <button class="profile-tab active" id="btn-animal">Mon animal</button>
+
+            </div>
+
+
+            <!-- Animal Form -->
+            <form id="animal-form">
+                <div class="animal-form">
+                    <!-- Colonne gauche - Formulaire -->
+                    <div class="form-column-left">
+                        <!-- Nom -->
+                        <div class="form-group">
+                            <label class="form-label">Nom</label>
+                            <input type="text" name="nom" id="nomAnimal" class="form-control" required>
+                        </div>
+
+                        <!-- Race -->
+                        <div class="form-group">
+                            <label class="form-label">Race</label>
+                            <input type="text" name="race" id="race" class="form-control" required>
+                        </div>
+
+                        <!-- Age -->
+                        <div class="form-group">
+                            <label class="form-label">Age</label>
+                            <input type="number" name="age" id="age" class="form-control" placeholder="Ex: 3" required>
+                        </div>
+
+
+                        <!-- Type d'animal -->
+                        <div class="form-group">
+                            <label class="form-label">Type d'animal</label>
+                            <select name="type-animal" id="select-type-animal" class="form-select" required>
+                                <option value="" disabled selected></option>
+                            </select>
+                        </div>
+
+                        <!-- Taille -->
+                        <div class="form-group">
+                            <label class="form-label">Taille</label>
+                            <select name="taille" id="select-taille" class="form-select" required>
+                                <option value="" disabled selected></option>
+                            </select>
+                        </div>
+
+                        <!-- Niveau d'activité -->
+                        <div class="form-group">
+                            <label class="form-label">Niveau d'activité</label>
+                            <select name="niveau-activite" id="select-niveau-activite" class="form-select" required>
+                                <option value="" disabled selected></option>
+                            </select>
+                        </div>
+
+                        <!-- Description (nouveau champ) -->
+                        <div class="form-group">
+                            <label class="form-label">Description</label>
+                            <textarea name="description" id="descriptionAnimal" class="form-control"
+                                rows="4"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Colonne droite - Checkboxes et Photo -->
+                    <div class="form-column-right">
+                        <!-- Les checkboxes restent inchangées pour l'instant -->
+                        <div class="checkbox-section">
+                            <!-- Tempérament -->
+                            <!-- Tempérament -->
+                            <div class="checkbox-group">
+                                <div class="checkbox-group-title">Temperament</div>
+                                <div class="checkbox-list" id="checkbox-list-temperaments">
+                                    <!-- Les checkboxes seront ajoutées dynamiquement -->
+                                </div>
+                            </div>
+
+                            <!-- Type de logement -->
+                            <div class="checkbox-group">
+                                <div class="checkbox-group-title">Type de logement</div>
+                                <div class="checkbox-list" id="checkbox-list-logements">
+                                    <!-- Les checkboxes seront ajoutées dynamiquement -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Photo de l'animal -->
+                        <div class="photo-upload-section">
+                            <label class="form-label">Photo de l'animal</label>
+                            <div class="photo-upload" onclick="document.getElementById('photo-input').click()">
+                                <div class="photo-upload-text">Choisir une image</div>
+                            </div>
+                            <input type="file" id="photo-input" accept="image/*">
+                        </div>
+
+                        <button type="submit" class="btn-add-animal">Ajouter mon animal</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-2">
+                    <a href="#" class="text-decoration-none">Support</a>
+                </div>
+                <div class="col-md-3 mb-2">
+                    <a href="#" class="text-decoration-none">Mentions légales</a>
+                </div>
+                <div class="col-md-3 mb-2">
+                    <a href="#" class="text-decoration-none">Politique de confidentialité</a>
+                </div>
+                <div class="col-md-3 mb-2">
+                    <a href="#" class="text-decoration-none">Conditions Générales d'Utilisation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./Javascript/animal/ajouterAnimalUI.js"></script>
+
+</body>
+
+</html>

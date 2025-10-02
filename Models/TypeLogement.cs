@@ -1,26 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PurrfectMates.Models
 {
-    public enum TypeLogement
+    [Table("TypesLogements")]
+    public class TypeLogement
     {
-        [Display(Name = "Maison sans jardin")]
-        MaisonSansJardin,
+        [Key]
+        [Column("idTypeLogement")]
+        public int IdTypeLogement { get; set; }
 
-        [Display(Name = "Maison avec jardin")]
-        MaisonAvecJardin,
-
-        [Display(Name = "Appartement sans balcon")]
-        AppartementSansBalcon,
-
-        [Display(Name = "Appartement avec balcon")]
-        AppartementAvecBalcon,
-
-        Studio
+        [Required]
+        [MaxLength(100)]
+        [Column("typeLogement")]
+        public string TypeLogementNom { get; set; } = string.Empty;
     }
 }

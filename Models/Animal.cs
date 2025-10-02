@@ -25,6 +25,9 @@ namespace PurrfectMates.Models
 
         public string? descriptionAnimal { get; set; }
 
+        public ICollection<Photo> Photos { get; set; } = new List<Photo>();
+        public ICollection<TemperamentParAnimal> TemperamentsParAnimaux { get; set; } = new List<TemperamentParAnimal>();
+        public ICollection<LogementParAnimal> LogementsParAnimaux { get; set; } = new List<LogementParAnimal>();
         public ICollection<Match> Matches { get; set; } = new List<Match>();
 
 

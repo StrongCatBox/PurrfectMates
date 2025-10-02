@@ -1,195 +1,193 @@
+.navbar {
+    background-color: white !important;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
 
-        
-        .navbar {
-            background-color: white !important;
-            padding: 1rem 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        
-        
-        .main-wrapper {
-            flex: 1;
-            display: flex;
-            overflow: hidden;
-        }
-        
-        
-        .content-area {
-            flex: 1;
-            padding: 2rem 3rem;
-            overflow-y: auto;
-        }
-        
-        .profile-tabs {
-            border-bottom: 2px solid #E0E0E0;
-            margin-bottom: 2rem;
-            display: flex;
-            gap: 0;
-        }
-        
-        .profile-tab {
-            padding: 1rem 2rem;
-            background: none;
-            border: none;
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            font-weight: 500;
-            cursor: pointer;
-            border-bottom: 3px solid transparent;
-            transition: all 0.3s ease;
-            position: relative;
-            bottom: -2px;
-        }
-        
-        .profile-tab.active {
-            color: #333;
-            border-bottom-color: var(--accent-color);
-        }
-        
-        .profile-tab:hover:not(.active) {
-            color: #333;
-        }
-        
-        .profile-header {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .profile-avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background-color: var(--secondary-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .profile-avatar i {
-            font-size: 3rem;
-            color: white;
-        }
-        
-        .profile-info h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .profile-badge {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-        
-        .profile-section {
-            background-color: white;
-            border-radius: 15px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .description-box {
-            width: 100%;
-            min-height: 150px;
-            border: 1px solid #E0E0E0;
-            border-radius: 10px;
-            padding: 1rem;
-            background-color: #FAFAFA;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            resize: vertical;
-        }
-        
-        .description-box:focus {
-            outline: none;
-            border-color: var(--accent-color);
-            background-color: white;
-        }
-        
-        .action-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-        
-        .btn-change-password {
-            background-color: var(--secondary-color);
-            border: none;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 25px;
-            font-weight: 500;
-            transition: background-color 0.3s ease;
-        }
-        
-        .btn-change-password:hover {
-            background-color: #6A8A6E;
-            color: white;
-        }
-        
-             .password-input {
-            background-color: #E8E8E8;
-            border: 1px solid #E0E0E0;
-            color: #666;
-            padding: 0.75rem 1.5rem;
-            border-radius: 25px;
-            font-size: 0.95rem;
-            flex: 1;
-            min-width: 200px;
-        }
-        
-        .password-input:focus {
-            outline: none;
-            border-color: var(--accent-color);
-            background-color: #F5F5F5;
-        }
-        
-        .password-input::placeholder {
-            color: #999;
-        }
-        
-        .btn-delete-account {
-            background-color: var(--accent-color);
-            border: none;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 25px;
-            font-weight: 500;
-            transition: background-color 0.3s ease;
-        }
-        
-        .btn-delete-account:hover {
-            background-color: #A66829;
-            color: white;
-        }
-        
-        
-        @media (max-width: 768px) {
-            .main-wrapper {
-                flex-direction: column;
-            }
-    
-            
-            .content-area {
-                padding: 1rem;
-            }
-            
-            .profile-header {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .action-buttons {
-                flex-direction: column;
-            }
-        }
+
+.main-wrapper {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+
+.content-area {
+    flex: 1;
+    padding: 2rem 3rem;
+    overflow-y: auto;
+}
+
+.profile-tabs {
+    border-bottom: 2px solid #E0E0E0;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 0;
+}
+
+.profile-tab {
+    padding: 1rem 2rem;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    bottom: -2px;
+}
+
+.profile-tab.active {
+    color: #333;
+    border-bottom-color: var(--accent-color);
+}
+
+.profile-tab:hover:not(.active) {
+    color: #333;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-avatar i {
+    font-size: 3rem;
+    color: white;
+}
+
+.profile-info h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.profile-badge {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.profile-section {
+    background-color: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.description-box {
+    width: 100%;
+    min-height: 150px;
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: #ffffff;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    resize: vertical;
+}
+
+.description-box:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    background-color: white;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.btn-change-password {
+    background-color: var(--secondary-color);
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-change-password:hover {
+    background-color: #6A8A6E;
+    color: white;
+}
+
+.password-input {
+    background-color: #E8E8E8;
+    border: 1px solid #E0E0E0;
+    color: #666;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    flex: 1;
+    min-width: 200px;
+}
+
+.password-input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    background-color: #F5F5F5;
+}
+
+.password-input::placeholder {
+    color: #999;
+}
+
+.btn-delete-account {
+    background-color: var(--accent-color);
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-delete-account:hover {
+    background-color: #A66829;
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+    .main-wrapper {
+        flex-direction: column;
+    }
+
+
+    .content-area {
+        padding: 1rem;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+}

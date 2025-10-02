@@ -19,42 +19,52 @@ document.addEventListener("DOMContentLoaded", async () => {
         return;
     }
 
-    // Mise à jour des infos dans la page
-    document.querySelector(".profile-info h2").textContent = `${user.prenomUtilisateur} ${user.nomUtilisateur}`;
-    document.querySelector(".profile-badge").textContent = user.role;
+    // Mise à jour des infos dans la page (seulement si présents)
+    const profileInfo = document.querySelector(".profile-info h2");
+    const profileBadge = document.querySelector(".profile-badge");
+
+    if (profileInfo) profileInfo.textContent = `${user.prenomUtilisateur} ${user.nomUtilisateur}`;
+    if (profileBadge) profileBadge.textContent = user.role;
 
     // Déconnexion
     const logoutLink = document.querySelector(".nav-link");
-    logoutLink.addEventListener("click", (e) => {
-        e.preventDefault();
-        localStorage.removeItem("token");
-        window.location.href = "accueil.html";
-    });
+    if (logoutLink) {
+        logoutLink.addEventListener("click", (e) => {
+            e.preventDefault();
+            localStorage.removeItem("token");
+            window.location.href = "accueil.html";
+        });
+    }
 
     // Gestion dynamique du deuxième onglet
     const btnDynamic = document.getElementById("btn-dynamic");
+    if (btnDynamic) {
+        if (user.role === "Proprietaire") {
+            btnDynamic.textContent = "Mon animal";
+            btnDynamic.addEventListener("click", () => {
+                window.location.href = "monProfilAnimal.html"; // page pour les propriétaires
+            });
+        } else {
+            btnDynamic.textContent = "Mes critères";
+            btnDynamic.addEventListener("click", () => {
+                window.location.href = "criteres.html"; // page pour les adoptants
+            });
+        }
+    }
 
-    if (user.role === "Proprietaire") {
-        btnDynamic.textContent = "Mon animal";
-        btnDynamic.addEventListener("click", () => {
-            window.location.href = "monAnimal.html"; // page pour les propriétaires
-        });
-    } else {
-        btnDynamic.textContent = "Mes critères";
-        btnDynamic.addEventListener("click", () => {
-            window.location.href = "criteres.html"; // page pour les adoptants
+    // Gestion des onglets fixes quand on est déjà sur monProfilAnimal ou criteres
+    const btnProfile = document.getElementById("btn-profile");
+    if (btnProfile) {
+        btnProfile.addEventListener("click", () => {
+            window.location.href = "monProfil.html";
         });
     }
+
+    const btnCriteres = document.getElementById("btn-criteres");
+if (btnCriteres) {
+    btnCriteres.addEventListener("click", () => {
+        window.location.href = "criteres.html"; 
+    });
+}
+
 });
-
-// Gestion du switch des onglets (visuel uniquement)
-window.switchTab = function (tab) {
-    const tabs = document.querySelectorAll('.profile-tab');
-    tabs.forEach(t => t.classList.remove('active'));
-
-    if (tab === 'profile') {
-        tabs[0].classList.add('active');
-    } else if (tab === 'animal') {
-        tabs[1].classList.add('active');
-    }
-};

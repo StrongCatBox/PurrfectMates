@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Purrfect Mates - Connexion</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/styleConnexion.css">
-         <link rel="stylesheet" href="/css/styleGeneral.css">
+    <link rel="stylesheet" href="/css/styleGeneral.css">
 
 
-   
+
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
@@ -44,24 +46,26 @@
                         <p class="welcome-subtitle">votre compagnon idéal.</p>
                     </div>
                 </div>
-                
+
                 <!-- Section Connexion -->
                 <div class="col-lg-6">
                     <div class="connexion-section">
                         <h2 class="connexion-title">Connexion</h2>
-                        
-                        <form>
+
+                        <form id="loginForm">
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Adresse e-mail" required>
+                                <input type="email" id="email" class="form-control" placeholder="Adresse e-mail"
+                                    required>
                             </div>
-                            
+
                             <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Mot de passe" required>
+                                <input type="password" id="password" class="form-control" placeholder="Mot de passe"
+                                    required>
                             </div>
-                            
+
                             <button type="submit" class="btn btn-connexion">Se connecter</button>
                         </form>
-                        
+
                         <div class="signup-link">
                             Vous n'avez pas de compte? <a href="#">S'inscrire</a>
                         </div>
@@ -92,5 +96,8 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./Javascript/auth/loginUi.js"></script>
+
 </body>
+
 </html>

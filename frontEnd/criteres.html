@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/styleCriteres.css">
     <link rel="stylesheet" href="/css/styleGeneral.css">
-   
+
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
@@ -20,7 +22,7 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
-                   <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" href="#">déconnexion</a>
                     </li>
                 </ul>
@@ -50,9 +52,10 @@
         <div class="content-area">
             <!-- Profile Tabs -->
             <div class="profile-tabs">
-                <button class="profile-tab" onclick="switchTab('profile')">Mon profil</button>
-                <button class="profile-tab active" onclick="switchTab('criteres')">Mes critères</button>
+                <button class="profile-tab" id="btn-profile">Mon profil</button>
+                <button class="profile-tab active" id="btn-criteres">Mes critères</button>
             </div>
+
 
             <!-- Criteria Form -->
             <div class="criteria-form">
@@ -93,19 +96,83 @@
                         </select>
                     </div>
 
-                    <!-- Tempérament -->
-                    <div class="form-group">
-                        <label class="form-label">Tempérament</label>
-                        <select class="form-select" required>
-                            <option value="" disabled selected></option>
-                            <option value="calme">Calme</option>
-                            <option value="joueur">Joueur</option>
-                            <option value="affectueux">Affectueux</option>
-                            <option value="independant">Indépendant</option>
-                            <option value="protecteur">Protecteur</option>
-                            <option value="sociable">Sociable</option>
-                        </select>
+                    <div class="row">
+                        <!-- Tempérament -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label class="form-label d-block">Tempérament</label>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="temperaments" value="1"
+                                        id="tempCalme">
+                                    <label class="form-check-label" for="tempCalme">Calme</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="temperaments" value="2"
+                                        id="tempJoueur">
+                                    <label class="form-check-label" for="tempJoueur">Joueur</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="temperaments" value="3"
+                                        id="tempAffectueux">
+                                    <label class="form-check-label" for="tempAffectueux">Affectueux</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="temperaments" value="4"
+                                        id="tempIndependant">
+                                    <label class="form-check-label" for="tempIndependant">Indépendant</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="temperaments" value="5"
+                                        id="tempProtecteur">
+                                    <label class="form-check-label" for="tempProtecteur">Protecteur</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="temperaments" value="6"
+                                        id="tempSociable">
+                                    <label class="form-check-label" for="tempSociable">Sociable</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Type de logement -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label class="form-label d-block">Type de logement</label>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="logements" value="1"
+                                        id="logAppartement">
+                                    <label class="form-check-label" for="logAppartement">Appartement</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="logements" value="2"
+                                        id="logMaison">
+                                    <label class="form-check-label" for="logMaison">Maison avec jardin</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="logements" value="3"
+                                        id="logFerme">
+                                    <label class="form-check-label" for="logFerme">Ferme</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="logements" value="4"
+                                        id="logAutre">
+                                    <label class="form-check-label" for="logAutre">Autre</label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+
 
                     <button type="submit" class="btn btn-save-criteria">Enregistrer mes critères</button>
                 </form>
@@ -134,18 +201,9 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function switchTab(tab) {
-            const tabs = document.querySelectorAll('.profile-tab');
-            tabs.forEach(t => t.classList.remove('active'));
-            
-            if (tab === 'profile') {
-                tabs[0].classList.add('active');
-                window.location.href = 'monProfil.html';
-            } else if (tab === 'criteres') {
-                tabs[1].classList.add('active');
-            }
-        }
-    </script>
+    <script type="module" src="./Javascript/auth/profileUi.js"></script>
+
+
 </body>
+
 </html>

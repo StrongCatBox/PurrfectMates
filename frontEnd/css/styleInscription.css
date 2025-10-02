@@ -1,8 +1,9 @@
-
 .navbar {
     background-color: transparent !important;
     padding: 1.5rem 0;
 }
+
+
 
 .main-container {
     flex: 1;
@@ -48,28 +49,74 @@
     text-align: center;
 }
 
-.form-floating {
+
+
+.section-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.btn-toggle-group {
+    display: flex;
+    gap: 0.5rem;
     margin-bottom: 1.5rem;
 }
 
-    .form-floating .form-control {
-        border: 1px solid #E0E0E0;
-        border-radius: 8px;
-        padding: 1rem 0.75rem;
-        font-size: 0.95rem;
-        background-color: #FAFAFA;
-    }
+.btn-toggle {
+    flex: 1;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid #E0E0E0;
+    background-color: white;
+    color: #666;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
 
-        .form-floating .form-control:focus {
-            border-color: var(--accent-color);
-            box-shadow: 0 0 0 0.2rem rgba(184, 115, 51, 0.15);
-            background-color: white;
-        }
+.btn-toggle.active {
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
 
-    .form-floating label {
-        color: var(--text-muted);
-        font-size: 0.9rem;
-    }
+.btn-toggle:hover:not(.active) {
+    background-color: #F8F9FA;
+}
+
+.photo-upload-label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 0.5rem;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.photo-upload {
+    border: 2px dashed #E0E0E0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #FAFAFA;
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+}
+
+.photo-upload:hover {
+    border-color: var(--accent-color);
+}
+
+.photo-upload-text {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+#photo-input {
+    display: none;
+}
 
 .btn-inscription {
     background-color: var(--accent-color);
@@ -86,10 +133,10 @@
     transition: background-color 0.3s ease;
 }
 
-    .btn-inscription:hover {
-        background-color: #A66829;
-        color: white;
-    }
+.btn-inscription:hover {
+    background-color: #A66829;
+    color: white;
+}
 
 .login-link {
     text-align: center;
@@ -97,15 +144,16 @@
     font-size: 0.9rem;
 }
 
-    .login-link a {
-        color: var(--accent-color);
-        text-decoration: none;
-        font-weight: 500;
-    }
+.login-link a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+}
 
-        .login-link a:hover {
-            text-decoration: underline;
-        }
+.login-link a:hover {
+    text-decoration: underline;
+}
+
 
 
 @media (max-width: 768px) {
